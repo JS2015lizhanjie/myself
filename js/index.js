@@ -12,6 +12,16 @@ else{
 
 }
 
+
+window.setTimeout(function () {
+    var oList = document.querySelectorAll(".slide>li");
+    var oDiv = oList[0].getElementsByTagName("div");
+    oDiv[0].id = "a1";
+    //for (var i = 0; i < oList.length; i++) {
+    //    oList[i].className = "move";
+    //}
+}, 300);
+
 [].forEach.call(oLis,function(){
     arguments[0].index=arguments[1];
     arguments[0].addEventListener("touchstart",start,false);
@@ -68,6 +78,44 @@ function end(e){
     }
 
 }
+
+
+
+
+window.addEventListener("load", function () {
+    var musicAudio = document.querySelector("#musicAudio");
+    var music = document.querySelector(".music");
+
+    musicAudio.addEventListener("canplay", function () {
+        music.style.display = "block";
+        music.className = "music move1";
+    }, false);
+    musicAudio.play();
+
+    $t.tap(music, {
+        end: function (e) {
+            if (musicAudio.paused) {
+                musicAudio.play();
+                this.className = "music move1";
+                return;
+            }
+            musicAudio.pause();
+            this.className = "music";
+        }
+    });
+}, false);
+
+//init on-page
+//window.setTimeout(function () {
+//    pageList[0].className = "pageDemo move";
+//}, 0);
+
+
+
+
+
+
+
 
 document.addEventListener("touchstart",function(){
 
