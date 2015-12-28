@@ -224,7 +224,7 @@ ul{
 .a3 p:nth-child(1){
     width: 200px;
     height: 200px;
-    line-height: 200px;
+    line-height: 180px;
     position: absolute;
     left: 4%;
     top: -5%;
@@ -241,18 +241,19 @@ ul{
 .a3 p:nth-child(2){
     width: 95%;
     /*height: 100px;*/
-    line-height: 50px;
+    line-height: 42px;
     position: absolute;
     left: 50%;
-    top: 14%;
+    top: 10%;
     /*display: inline-block;*/
     /*float: left;*/
     margin-left: -235px;
-    font-size: 30px;
+    font-size: 25px;
     /*border-radius: 50%;*/
     /*background: #11c900;*/
     /*text-align: center;*/
-    color: #f600f6;
+    color: #0000cc;
+    font-weight: bold;
 }
 /*.a3 p:nth-child(3){*/
     /*width: 100px;*/
